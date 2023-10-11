@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  validate :name, presence: true
-  validate :synopsis, presence: true
-  validate :director, presence: true
+  validates :name, presence: true
+  validates :synopsis, presence: true
+  validates :director, presence: true
 end

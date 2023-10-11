@@ -5,13 +5,16 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.new(movie_params)
-    #
-    # Agregar validacion
-    #
+    if @movie.save
+      redirect_to movies_index_path
+    else
+      puts "Status: FAIL!"
+      redirect_to movies_new_path
+    end
   end
 
   def new
-    @movies = Movie.new
+    @movie = Movie.new
   end
 
   # Parametros
