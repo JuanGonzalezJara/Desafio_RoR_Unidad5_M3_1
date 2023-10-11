@@ -5,9 +5,12 @@ class SeriesController < ApplicationController
 
   def create
     @serie = Series.new(serie_params)
-    #
-    # Agregar validacion
-    #
+    if @serie.save
+      redirect_to series_index_path
+    else
+      puts "Status: FAIL!"
+      redirect_to series_new_path
+    end
   end
 
   def new

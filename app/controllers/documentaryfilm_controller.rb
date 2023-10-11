@@ -5,9 +5,12 @@ class DocumentaryfilmController < ApplicationController
 
   def create
     @documentary_film = DocumentaryFilm.new(documentary_film_params)
-    #
-    # Agregar validacion
-    #
+    if @documentary_film.save
+      redirect_to documentaryfilm_index_path
+    else
+      puts "Status: FAIL!"
+      redirect_to documentaryfilm_new_path
+    end
   end
 
   def new

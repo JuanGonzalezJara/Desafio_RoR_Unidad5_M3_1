@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "documentaryfilm/idex"
+  get "documentaryfilm/index"
   get "documentaryfilm/create"
   get "documentaryfilm/new"
   get "series/index"
