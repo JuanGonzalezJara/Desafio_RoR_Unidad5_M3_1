@@ -1,8 +1,14 @@
 <h1>Peliculas</h1>
-<% @movies.each do |movie| %>
-  <div>
-    <p><strong>Nombre: </strong><%= movie.name %></p>
-    <p><strong>Sinopsis:</strong> <%= movie.synopsis %></p>
-    <p><strong>Director:</strong> <%= movie.director %></p>
-  </div>
-<% end %>
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="card m-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= movie.name%></h5>
+        <p class="card-text"><strong>Sinopsis:</strong> <%= movie.synopsis %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Director:</strong> <%= movie.director %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

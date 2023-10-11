@@ -1,8 +1,14 @@
-<h1>Documentales</h1>
-<% @documentary_films.each do |documentary| %>
-  <div>
-    <p><strong>Nombre: </strong><%= documentary.name %></p>
-    <p><strong>Sinopsis:</strong> <%= documentary.synopsis %></p>
-    <p><strong>Director:</strong> <%= documentary.director %></p>
-  </div>
-<% end %>
+<h1>Documetales</h1>
+<div class="row">
+  <% @documentary_films.each do |documental| %>
+    <div class="card m-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= documental.name%></h5>
+        <p class="card-text"><strong>Sinopsis:</strong> <%= documental.synopsis %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Director:</strong> <%= documental.director %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

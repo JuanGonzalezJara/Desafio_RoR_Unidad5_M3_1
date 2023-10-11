@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/index'
   get "documentaryfilm/index"
   get "documentaryfilm/create"
   get "documentaryfilm/new"
