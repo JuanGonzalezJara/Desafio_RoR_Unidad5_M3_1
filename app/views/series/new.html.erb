@@ -1,16 +1,16 @@
-<h1>Nueva Serie</h1>
-<p>Llena los campos para ingresar una nueva serie.</p>
-<%= form_with model: @serie, url: series_new_post_path, method: :post, class: "form" do |form| %>
+<h1 class="text-light">Nueva Serie</h1>
+<p class="text-light">Llena los campos para ingresar una nueva serie.</p>
+<%= form_with model: @series, url: series_new_post_path, method: :post, class: "form" do |form| %>
   <div class="form-group">
-    <%= form.label :name, "Movie Title", class: "control-label" %>
+    <%= form.label :name, "Nombre Serie", class: "control-label text-light" %>
     <%= form.text_field :name, class: "form-control bg-input" %>
   </div>
   <div class="form-group my-3">
-    <%= form.label :synopsis, "Movie Synopsis", class: "control-label" %>
+    <%= form.label :synopsis, "Synopsis Serie", class: "control-label text-light" %>
     <%= form.text_area :synopsis, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= form.label :director, "Movie Director", class: "control-label" %>
+    <%= form.label :director, "Nombre Director", class: "control-label text-light" %>
     <%= form.text_field :director, class: "form-control" %>
   </div>
   <div class="form-group mt-3">

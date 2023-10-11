@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/index'
+  get "pages/index"
   get "documentaryfilm/index"
   get "documentaryfilm/create"
   get "documentaryfilm/new"
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post "movies/new", to: "movies#create", as: "movies_new_post"
   post "series/new", to: "series#create", as: "series_new_post"
-  post "documentary_film/new", to: "documentary_film#create", as: "documentary_film_new_post"
+  post "documentary_film/new", to: "documentaryfilm#create", as: "documentary_film_new_post"
 
   # Defines the root path route ("/")
   root "movies#index"

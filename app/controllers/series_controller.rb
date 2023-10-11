@@ -14,11 +14,11 @@ class SeriesController < ApplicationController
   end
 
   def new
-    @serie = Series.new
+    @series = Series.new
   end
 
   # Parametros
   def serie_params
-    params.require(:serie).permit(:name, :synopsis, :director)
+    params.require(:series).permit(:name, :synopsis, :director)
   end
 end
